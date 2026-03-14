@@ -5,17 +5,17 @@ show
 # Create empty queue
 new
 # Fill it with some values.  First at the head
-ih dolphin
-ih bear
-ih gerbil
+#ih dolphin
+#ih bear
+#ih gerbil
 # Now at the tail
-it meerkat
-it bear
+#it meerkat
+#it bear
 # Reverse it
-reverse
+#reverse
 # See how long it is
-size
+#size
 # Delete queue.  Goes back to a NULL queue.
-free
+#free
 # Exit program
 quit

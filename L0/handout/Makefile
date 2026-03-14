@@ -3,8 +3,10 @@
 CC = clang
 CFLAGS = -std=c11 -Og -g -Werror -Wall -Wextra -Wpedantic -Wconversion
 CFLAGS += -Wstrict-prototypes -Wmissing-prototypes -Wwrite-strings
-CFLAGS += -gdwarf-4 -Wno-unused-parameter -fsanitize=address,undefined
-LDFLAGS = -fsanitize=address,undefined
+CFLAGS += -gdwarf-4 -Wno-unused-parameter
+SANITIZERS ?=
+CFLAGS += $(SANITIZERS)
+LDFLAGS = $(SANITIZERS)
 
 PROGRAMS = qtest
 all: $(PROGRAMS)
