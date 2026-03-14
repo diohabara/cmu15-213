@@ -1,0 +1,21 @@
+default:
+    @just --list
+
+status:
+    @echo "Public self-study handout is already unpacked in ./handout."
+
+run-ctarget:
+    test -x handout/ctarget
+    cd handout && ./ctarget -q
+
+run-rtarget:
+    test -x handout/rtarget
+    cd handout && ./rtarget -q
+
+gdb-ctarget:
+    test -x handout/ctarget
+    cd handout && gdb --args ./ctarget -q
+
+gdb-rtarget:
+    test -x handout/rtarget
+    cd handout && gdb --args ./rtarget -q
